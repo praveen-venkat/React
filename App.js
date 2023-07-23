@@ -1,11 +1,14 @@
-//   const header = document.createElement('h1'); header.innerHTML = 'Welcome toNamaste Chennai!!!!'; 
-//   const root = document.getElementById('root');
-//   root.append(header);
+/**
+ * <div>
+ *  <div>
+ *      <h1> Welcome to react </h1> 
+ *  <div>
+ * </div>
+ * 
+ */
 
-const heading = React.createElement("h1",
-{class:'parent'},
-React.createElement("h1",{class:'child'},
-[React.createElement("h1",{class:'innerChild'},"Hello from inner child1"),React.createElement("h1",{class:'innerChild2'},"Hello from inner child2")]
-));
+const child = React.createElement('div',{id:"parent"},React.createElement('div',{id:"child"},React.createElement('h1',{id: "header"},'This is the header')));
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(heading);
+
+root.render(child);
